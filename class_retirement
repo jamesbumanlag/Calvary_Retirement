@@ -1,0 +1,37 @@
+class Resident:
+    def __init__(self, name, gender, room, section):
+        self.name = name
+        self.gender = gender
+        self.room = room
+        self.section = section
+
+    def introduce(self):
+        print('------------------------------')
+        print(f'Resident Room: {self.room}')
+        print(f'    Name    : {self.name}')
+        print(f'    Gender  : {self.gender}')
+        print(f'    Section : {self.section}')
+        print('------------------------------')
+
+res_list = []
+
+while True:
+    print()
+    name = input('Name: ')
+    gender = input('Gender: ')
+    room = input('Room: ')
+    section = input('Section: ')
+    print()
+    res = Resident(name,gender,room,section)
+    res_list.append(res)
+
+    user_choice = input('Add more [Y/N] : ').upper()
+
+    if user_choice == 'Y':
+        continue
+    else:
+        break
+
+for r in res_list:
+
+    res.introduce()
